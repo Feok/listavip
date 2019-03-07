@@ -29,9 +29,9 @@ public class ConvidadoController {
         return "listaconvidados";
     }
 
-    @RequestMapping(value="salvar", method= RequestMethod.POST)
+    @RequestMapping(value= "salvar", method = RequestMethod.POST)
     public String salvar(@RequestParam("nome") String nome, @RequestParam("email") String email,
-                       @RequestParam("telefone") String telefone, Model model) {
+                         @RequestParam("telefone") String telefone, Model model ){
 
         Convidado novoConvidado = new Convidado(nome, email, telefone);
         repository.save(novoConvidado);
